@@ -1,8 +1,12 @@
-# HTTP Requests Branch
+# Status Codes Branch
 
-- Make HTTP requests to get data from another server
+- Informational responses (100–199)
 
-- We make these requests to API endpoints
+- Successful responses (200–299)
 
-  - Example API endpoint:
-    http://www.musicapi.com/artist/moby
+- Redirects (300–399)
+
+- Client errors (400–499)
+
+- Server errors (500–599)
+  - https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
