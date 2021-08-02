@@ -18,34 +18,16 @@ const getTodos = (resource) => {
 
 getTodos("todos/eren.json")
   .then((data) => {
-    console.log("promise resolved:", data);
+    console.log("promise 1 resolved:", data);
+    return getTodos("todos/mario.json");
+  })
+  .then((data) => {
+    console.log("promise 2 resolved:", data);
+    return getTodos("todos/naruto.json");
+  })
+  .then((data) => {
+    console.log("promise 3 resolved:", data);
   })
   .catch((err) => {
     console.log("promise rejected:", err);
   });
-
-// promise example
-const getSomething = () => {
-  return new Promise((resolve, reject) => {
-    // fetch something
-    resolve("some data");
-    // reject("some error");
-  });
-};
-
-// getSomething().then(
-//   (data) => {
-//     console.log(data);
-//   },
-//   (err) => {
-//     console.log(err);
-//   }
-// );
-
-// getSomething()
-//   .then((data) => {
-//     console.log(data);
-//   })
-//   .catch((err) => {
-//     console.log(err);
-//   });
